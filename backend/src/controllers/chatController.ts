@@ -43,6 +43,9 @@ export async function getOrCreateChat(req: AuthRequest, res: Response, next: Nex
             return
         }
 
+        if (!Types.ObjectId.isValid(participantId as string)) {
+            return res.status(400).json({ message: "Invalid participant ID!" })
+        }
 
         if (userId === participantId) {
             res.status(400).json({ message: "Cannot create chat with yourself!" })
