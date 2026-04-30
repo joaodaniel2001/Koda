@@ -9,7 +9,10 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3"
   },
   "peerDependencies": {
     "typescript": "^5"
@@ -20,6 +23,9 @@
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "mongoose": "^9.5.0",
+    "next": "^16.2.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
     "socket.io": "^4.8.3"
   }
 }
