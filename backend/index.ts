@@ -9,18 +9,18 @@ const httpServer = createServer(app);
 
 initializeSocket(httpServer);
 
-// index.ts
 async function startServer() {
     try {
         await connectDB();
+        console.log("Successfully connected to MongoDB!");
+
+        console.log("Preparing Next.js... (this may take a few seconds)");
+        await nextApp.prepare();
+        console.log("Next.js is ready!");
 
         httpServer.listen(PORT, "0.0.0.0", () => {
-            console.log(`Server listening on PORT: ${PORT}`);
+            console.log(`Server is running and accepting connections on PORT: ${PORT}`);
         });
-
-        console.log("Preparing Next.js...");
-        await nextApp.prepare();
-        console.log("Next.js ready!");
 
     } catch (error) {
         console.error("Error starting the server:", error);
