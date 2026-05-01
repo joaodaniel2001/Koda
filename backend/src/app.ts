@@ -13,8 +13,6 @@ const dev = process.env.NODE_ENV !== "production";
 const nextApp = next({ 
     dev, 
     dir: path.join(import.meta.dir, "../../web"),
-    hostname: "localhost",
-    port: 3000
 });
 const handle = nextApp.getRequestHandler();
 
