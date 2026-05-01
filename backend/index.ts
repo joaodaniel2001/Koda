@@ -19,7 +19,7 @@ async function startServer() {
         console.log("Next.js is ready!");
 
         httpServer.listen(PORT, "0.0.0.0", () => {
-            console.log(`Server is running and accepting connections on PORT: ${PORT}`);
+            console.log(`Server is running on 0.0.0.0:${PORT}`);
         });
 
     } catch (error) {
